@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serverless Image Resizer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <div class="logo">
+                <i class="fa-solid fa-image"></i>
+            </div>
+
+            <h1>Serverless Image Resizer</h1>
+
+            <p class="subtitle">
+                Upload images up to 40MB and download resized versions instantly using AWS Lambda and Amazon S3.
+            </p>
+
+            <div class="upload-area" id="dropArea">
+
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                <h2>Drag & Drop Image Here</h2>
+
+                <p>or</p>
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    hidden
+                    accept="image/*"
+                >
+
+                <button id="browseBtn">
+                    Browse Image
+                </button>
+
+            </div>
+
+            <div class="preview-container">
+
+                <img
+                    id="previewImage"
+                    src=""
+                    alt=""
+                >
+
+            </div>
+
+            <button
+                id="uploadBtn"
+                class="upload-btn"
+            >
+                Upload Image
+            </button>
+
+            <div id="status"></div>
+
+            <div class="progress-container">
+
+                <div class="progress-bar" id="progressBar"></div>
+
+            </div>
+
+            <a
+                id="downloadBtn"
+                target="_blank"
+            >
+                <button class="download-btn">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download Resized Image
+
+                </button>
+            </a>
+
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
